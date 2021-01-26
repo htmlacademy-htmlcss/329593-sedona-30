@@ -24,7 +24,192 @@
         </div>
       </header>
       <main class="main">
-
+        <div class="wrapper-main"><!--Обертка содержимого-->
+          <h1 class="visually-hidden">Гостиницы</h1>
+          <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="form-fieldset">
+              <legend class="form-legend">Инфраструктура:</legend>
+              <ul class="form-list">
+                <li class="form-item">
+                  <label for="filter-pool" class="check check-on">
+                    <input class="input-check visually-hidden" type="checkbox" name="pool" id="filter-pool" checked>
+                    Бассейн
+                  </label>
+                </li>
+                <li class="form-item">
+                  <label for="filter-parking" class="check check-off">
+                    <input class="input-check visually-hidden" type="checkbox" name="parking" id="filter-parking">
+                    Парковка
+                  </label>
+                </li>
+                <li class="form-item">
+                  <label for="filter-wi-fi" class="check check-off">
+                    <input class="input-check visually-hidden" type="checkbox" name="wi-fi" id="filter-wi-fi" disabled>
+                    Wi-fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <legend class="form-legend">Тип жилья:</legend>
+              <ul class="form-list">
+                <li class="form-item">
+                  <label for="filter-hotel" class="check check-on">
+                    <input class="input-check visually-hidden" type="checkbox" name="hotel" id="filter-hotel" checked>
+                    Гостинница
+                  </label>
+                </li>
+                <li class="form-item">
+                  <label for="filter-motel" class="check check-on">
+                    <input class="input-check visually-hidden" type="checkbox" name="motel" id="filter-motel" checked>
+                    Мотель
+                  </label>
+                </li>
+                <li class="form-item">
+                  <label for="filter-apartments" class="check-on">
+                    <input class="input-check visually-hidden" type="checkbox" name="apartments" id="filter-apartments" checked disabled>
+                    Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <form class="form-cost-filter">
+              <fieldset class="cost-filter">
+                <legend>Стоимость в сутки (Р):</legend>
+                <div class="cost-control">
+                  <label class="cost-from">
+                    от
+                    <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="cost-to">
+                    до
+                    <input type="number" name="max-price" value="3000">
+                  </label>
+                </div>
+                <div class="cost-range">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0" aria-label="Уменьшить стоимость"></div>
+                    <div class="toggle toggle-max" tabindex="0" aria-label="Увеличить стоимость"></div>
+                  <button type="submit" class="button-show" aria-label="Показать подходящие варианты">Показать</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </form>
+          <section class="sorting-results">
+            <p>Найдено: 3</p>
+            <div class="sorting">
+              <h2>Сортировка</h2>
+              <ul class="sorting-list">
+                <li class="sorting-item">
+                  <a class="active-link" href="#">По цене</a>
+                </li>
+                <li class="sorting-item">
+                  <a href="#">По типу</a>
+                </li>
+                <li class="sorting-item">
+                  <a href="#">По рейтингу</a>
+                </li>
+              </ul>
+            </div>
+            <div class="arrow">
+              <a href="#" aria-label="Стрелка вверх"></a>
+              <a href="#" aria-label="Стрелка вниз"></a>
+            </div>
+          </section>
+          <section class="list-of-hotels">
+            <h2 class="visually-hidden">Список отелей</h2>
+            <ul class="list-wrapper">
+              <li class="list-block">
+                <img src="img/amara-resort.jpg" width="135" height="90" alt="Идеальный романтический курорт, Амара Резорт & Спа">
+                <div class="block-info">
+                  <h3>Amara Resort &#38; Spa</h3>
+                  <table class="block-table">
+                    <tr class="table-row">
+                      <td>
+                        Гостинница  
+                      </td>
+                      <td class="price">
+                        От 4000 р.
+                      </td>
+                    </tr>
+                    <tr class="links-row">
+                      <td>
+                        <a class="more" href="#">Подробнее</a>
+                      </td>
+                      <td>
+                        <a class="to-book" href="#">Забронировать</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="decorative-wrapper">
+                  <div class="stars">Декоративный элемент</div>
+                  <div class="rating">Рейтинг: 8,5</div>
+                </div>    
+              </li>
+              <li class="list-block">
+                <img src="img/desert-quaill-inn.jpg" width="135" height="90" alt="Высококлассный мотель, Дезерт Квейл Инн">
+                <div class="block-info">
+                  <h3>Desert Quail Inn</h3>
+                  <table class="block-table">
+                    <tr class="table-row">
+                      <td>
+                        Мотель   
+                      </td>
+                      <td class="price">
+                        От 3000 р.
+                      </td>
+                    </tr>
+                    <tr class="links-row">
+                      <td>
+                        <a href="#">Подробнее</a>
+                      </td>
+                      <td>
+                        <a class="to-book" href="#">Забронировать</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="decorative-wrapper">
+                  <div class="stars">Декоративный элемент</div>
+                  <div class="rating">Рейтинг: 8,9</div>
+                </div>    
+              </li>
+              <li class="list-block">
+                <img src="img/poco-diablo.jpg" width="135" height="90" alt="Уютное совершенство, Виллы Оф Поко Дайабло">
+                <div class="block-info">
+                  <h3>Villas at Poco Diablo</h3>
+                  <table class="block-table">
+                    <tr class="table-row">
+                      <td>
+                        Апартаменты   
+                      </td>
+                      <td class="price">
+                        От 2000 р.
+                      </td>
+                    </tr>
+                    <tr class="links-row">
+                      <td>
+                        <a href="#">Подробнее</a>
+                      </td>
+                      <td>
+                        <a class="to-book" href="#">Забронировать</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="decorative-wrapper">
+                  <div class="stars">Декоративный элемент</div>
+                  <div class="rating">Рейтинг: 9,2</div>
+                </div>    
+              </li>
+            </ul>
+          </section>
+        </div>
       </main>
       <footer class="footer"><!--Подвал-->
         <div class="wrapper-footer">
