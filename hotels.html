@@ -6,22 +6,22 @@
     <link rel="icon" href="favicon32.ico">
     <link rel="icon" href="favicon32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon152.png">
-    <!-- <link rel="stylesheet">Стили в будущем -->
-    <!-- <link rel="stylesheet">Normalize в будущем -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <div class="shadow"><!--Тень центровщик-->
-      <header class="header"><!--Шапка-->
+      <header class="main-header"><!--Шапка-->
         <div class="navigation-wrapper"><!--Обертка содержимого-->
-          <nav class="nav">
-            <a href="index.html" class="logo">
+          <nav class="main-navigation">
+            <a href="index.html" class="main-header-logo">
               <img src="img/icons/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
             </a>
             <ul class="site-navigation">
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Фото и видео</a></li>
-              <li><a href="#">Карта штата</a></li>
-              <li><a href="#">Гостиницы</a></li>
+              <li class="navigation-item"><a href="#">Информация</a></li>
+              <li class="navigation-item"><a href="#">Фото и видео</a></li>
+              <li class="navigation-item"><a href="#">Карта штата</a></li>
+              <li class="navigation-item"><a href="#">Гостиницы</a></li>
             </ul>
           </nav>
         </div>
@@ -34,20 +34,23 @@
               <legend class="form-legend">Инфраструктура:</legend>
               <ul class="form-list">
                 <li class="form-item">
-                  <label for="filter-pool" class="check check-on">
-                    <input class="input-check visually-hidden" type="checkbox" name="pool" id="filter-pool" checked>
+                  <label for="filter-pool" class="check option check-on">
+                    <input class="input-check" type="checkbox" name="pool" id="filter-pool" checked>
+                    <span class="check-box"></span>
                     Бассейн
                   </label>
                 </li>
                 <li class="form-item">
-                  <label for="filter-parking" class="check check-off">
-                    <input class="input-check visually-hidden" type="checkbox" name="parking" id="filter-parking">
+                  <label for="filter-parking" class="check option check-off">
+                    <input class="input-check" type="checkbox" name="parking" id="filter-parking">
+                    <span class="check-box check-box-parking"></span>
                     Парковка
                   </label>
                 </li>
                 <li class="form-item">
-                  <label for="filter-wi-fi" class="check check-off">
-                    <input class="input-check visually-hidden" type="checkbox" name="wi-fi" id="filter-wi-fi" disabled>
+                  <label for="filter-wi-fi" class="check option check-off">
+                    <input class="input-check" type="checkbox" name="wi-fi" id="filter-wi-fi" disabled>
+                    <span class="check-box check-box-wi-fi"></span>
                     Wi-fi
                   </label>
                 </li>
@@ -57,20 +60,23 @@
               <legend class="form-legend">Тип жилья:</legend>
               <ul class="form-list">
                 <li class="form-item">
-                  <label for="filter-hotel" class="check check-on">
-                    <input class="input-check visually-hidden" type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <label for="filter-hotel" class="check option check-on">
+                    <input class="input-check" type="checkbox" name="hotel" id="filter-hotel" checked>
+                    <span class="check-box"></span>
                     Гостинница
                   </label>
                 </li>
                 <li class="form-item">
-                  <label for="filter-motel" class="check check-on">
-                    <input class="input-check visually-hidden" type="checkbox" name="motel" id="filter-motel" checked>
+                  <label for="filter-motel" class="check option check-on">
+                    <input class="input-check" type="checkbox" name="motel" id="filter-motel" checked>
+                    <span class="check-box"></span>
                     Мотель
                   </label>
                 </li>
                 <li class="form-item">
-                  <label for="filter-apartments" class="check-on">
-                    <input class="input-check visually-hidden" type="checkbox" name="apartments" id="filter-apartments" checked disabled>
+                  <label for="filter-apartments" class="check option check-on">
+                    <input class="input-check" type="checkbox" name="apartments" id="filter-apartments" checked disabled>
+                    <span class="check-box"></span>
                     Апартаменты
                   </label>
                 </li>
@@ -79,7 +85,7 @@
           </form>
           <form class="form-cost-filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="cost-filter">
-              <legend>Стоимость в сутки (Р):</legend>
+              <legend class="form-legend">Стоимость в сутки (Р):</legend>
               <div class="cost-control">
                 <label class="cost-from">
                   от
@@ -134,7 +140,7 @@
                   <table class="block-table">
                     <tr class="table-row">
                       <td>
-                        Гостинница  
+                        Гостинница
                       </td>
                       <td class="price">
                         От 4000 р.
@@ -153,7 +159,7 @@
                 <div class="decorative-wrapper">
                   <div class="stars">Декоративный элемент</div>
                   <div class="rating">Рейтинг: 8,5</div>
-                </div>    
+                </div>
               </li>
               <li class="list-block">
                 <img src="img/desert-quaill-inn.jpg" width="135" height="90" alt="Высококлассный мотель, Дезерт Квейл Инн">
@@ -162,7 +168,7 @@
                   <table class="block-table">
                     <tr class="table-row">
                       <td>
-                        Мотель   
+                        Мотель
                       </td>
                       <td class="price">
                         От 3000 р.
@@ -181,7 +187,7 @@
                 <div class="decorative-wrapper">
                   <div class="stars">Декоративный элемент</div>
                   <div class="rating">Рейтинг: 8,9</div>
-                </div>    
+                </div>
               </li>
               <li class="list-block">
                 <img src="img/poco-diablo.jpg" width="135" height="90" alt="Уютное совершенство, Виллы Оф Поко Дайабло">
@@ -190,7 +196,7 @@
                   <table class="block-table">
                     <tr class="table-row">
                       <td>
-                        Апартаменты   
+                        Апартаменты
                       </td>
                       <td class="price">
                         От 2000 р.
@@ -209,13 +215,13 @@
                 <div class="decorative-wrapper">
                   <div class="stars">Декоративный элемент</div>
                   <div class="rating">Рейтинг: 9,2</div>
-                </div>    
+                </div>
               </li>
             </ul>
           </section>
         </div>
       </main>
-      <footer class="footer"><!--Подвал-->
+      <footer class="main-footer"><!--Подвал-->
         <div class="wrapper-footer">
           <div class="contacts">
             <a class="adress" href="#">#VISITSEDONA</a>
