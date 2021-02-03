@@ -6,22 +6,22 @@
     <link rel="icon" href="favicon32.ico">
     <link rel="icon" href="favicon32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon152.png">
-    <!-- <link rel="stylesheet">Стили в будущем -->
-    <!-- <link rel="stylesheet">Normalize в будущем -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <div class="shadow"><!--Тень центровщик-->
-      <header class="header"><!--Шапка-->
+      <header class="main-header"><!--Шапка-->
         <div class="navigation-wrapper"><!--Обертка содержимого-->
-          <nav class="nav">
-            <a class="logo">
+          <nav class="main-navigation">
+            <a class="main-header-logo">
               <img src="img/icons/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
             </a>
             <ul class="site-navigation">
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Фото и видео</a></li>
-              <li><a href="#">Карта штата</a></li>
-              <li><a href="hotels.html">Гостиницы</a></li>
+              <li class="navigation-item"><a href="#">Информация</a></li>
+              <li class="navigation-item"><a href="#">Фото и видео</a></li>
+              <li class="navigation-item"><a href="#">Карта штата</a></li>
+              <li class="navigation-item"><a href="hotels.html">Гостиницы</a></li>
             </ul>
           </nav>
         </div>
@@ -34,16 +34,16 @@
             <img class="logo-welcome" src="img/icons/intro-welcome.svg" width="456" height="350" alt="Добро пожаловать в Седону">
           </section>
           <section class="container-benefits">
-            <h2>Причины посещения Седоны</h2>
+            <h2 class="visually-hidden">Причины посещения Седоны</h2>
             <div class="reason-container">
               <p>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
               <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
             </div>
           </section>
           <ul class="reasons-list">
-            <li class="reason-list-item-container">
+            <li class="reason-list-item">
               <div class="reason-first">
-                <h3>Настоящий городок</h3>
+                <h3 class="reasons-list-title">Настоящий городок</h3>
                 <p>— №1 —</p>
                 <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
@@ -54,15 +54,15 @@
             <li class="container-advantages"><!--Возможна ли такая вложенность?-->
               <ul class="advantages-list">
                 <li class="advantages-list-item advantages-icon icon-home">
-                  <h3 class="list-title">Жилье</h3>
+                  <h3 class="advantages-title">Жилье</h3>
                   <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
                 <li class="advantages-list-item advantages-icon icon-food">
-                  <h3 class="list-title">Еда</h3>
+                  <h3 class="advantages-title">Еда</h3>
                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li class="advantages-list-item advantages-icon icon-souvenirs">
-                  <h3 class="list-title">Сувениры</h3>
+                  <h3 class="advantages-title">Сувениры</h3>
                   <p>Не только китайского, но и местного производства</p>
                 </li>
               </ul>
@@ -70,25 +70,25 @@
             <li class="devils-bridge-canyon">
               <img src="img/canyon.jpg" width="800" height="256" alt="Каньон мост дьявола">
             </li>
-            <li class="reason-list-item-container-2">
+            <li class="reason-list-item">
               <div class="reason-second">
-                <h3>Там есть мост дьявола</h3>
+                <h3 class="reasons-list-title">Там есть мост дьявола</h3>
                 <p>— №2 —</p>
                 <p>Да, по нему можно пройти! если конечно вы осмелитесь</p>
               </div>
             </li>
             <li class="reason-third">
-              <p>небольшая площадь</p>
+              <h3 class="reasons-list-title">небольшая площадь</h3>
               <p>— №3 —</p>
               <p>все достопримечательности находятся очень близко</p>
             </li>
             <li class="reason-fourth">
-              <p>красивая дорога</p>
+              <h3 class="reasons-list-title">красивая дорога</h3>
               <p>— №4 —</p>
               <p>ехать в седону из лас-вегаса совсем не скучно!</p>
            </li>
            <li class="reason-fifth">
-             <p>мало туристов</p>
+             <h3 class="reasons-list-title">мало туристов</h3>
              <p>— №5 —</p>
              <p>большинство едет в гранд каньон и толпится там</p>
            </li>
@@ -126,7 +126,7 @@
                       <input class="field-children" type="text" name="number-child" id="child-field" placeholder="0">
                       <button class="btn-more" type="button" aria-label="Увеличить колличество детей"><svg width="11" height="11" fill="A9A9A9" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9"/></svg></button>
                     </div>
-                    <button class="button-find btn-blue" type="submit">Найти</button>
+                    <button class="button-find" type="submit">Найти</button>
                   </div>
                 </form>
               </div>
@@ -138,11 +138,11 @@
           </section>
         </div>
       </main>
-      <footer><!--Подвал-->
+      <footer class="main-footer"><!--Подвал-->
         <div class="wrapper-footer"><!--Обертка содержимого подвала-->
           <div class="contacts">
             <a class="adress" href="#">#VISITSEDONA</a>
-            Тел: <a class="phone" href="tel:+74956660166">+7(495)666-01-66</a>
+            Тел: <a class="contacts-phone" href="tel:+74956660166">+7(495)666-01-66</a>
           </div>
           <div class="social-wrapper">
             <ul class="social-list">
