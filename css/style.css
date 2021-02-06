@@ -24,6 +24,7 @@
     --text-color-dark: #333333;
     --text-color-black: #000000;
     --text-color-white: #ffffff;
+    --basic-color-rating: #666666;
     --basic-page-color: #f2f2f2;
     --basic-color-brown: #766357;
     --basic-color-blue: #81B3D2;
@@ -282,9 +283,9 @@
   fill: var(--basic-color-blue);
 }
 
-/* .calendar:focus {
+.calendar:focus {
   outline: 1px solid var(--text-color-black);
-}*/
+}
 
 .btn-less,
 .btn-more {
@@ -293,10 +294,10 @@
   background-color: transparent;
 }
 
-/* .btn-less:focus,
+.btn-less:focus,
 .btn-more:focus {
   outline: 1px solid var(--text-color-black);
-}*/
+}
 .btn-less:hover path,
 .btn-more:hover path {
   fill: var(--text-color-black);
@@ -331,10 +332,11 @@
 
 /* HOTELS */
 .form-filter {
+  min-height: 217px;
   background-image: url(../img/filter.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 217px;
+  background-color: var(--basic-block-color);
 }
 
 .form-list,
@@ -353,11 +355,9 @@
 
 .form-filter,
 .form-cost-filter {
+  font: inherit;
   color: var(--text-color-white);
-}
-
-.form-cost-filter input {
-  color: var(--text-color-white);
+  text-transform: uppercase;
 }
 
 .option {
@@ -411,6 +411,191 @@
 .input-check:checked:disabled + .check-box {
   background-image: url(../img/icons/checkbox-on-disabled.svg);
   background-repeat: no-repeat;
+}
+/* FORM-COST-FILTER ПОКА НЕ ПОНЯТНО КАК ПРИВЕСТИ ЕГО В ПОРЯДОК КАК В МАКЕТЕ */
+
+.filter-item legend {
+  margin-bottom: 10px;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 250px;
+  margin-top: 10px;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  margin-top: 10px;
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.price-controls input {
+  width: 110px;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  background: #333;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-color-white);
+  text-transform: uppercase;
+}
+
+.button-show {
+  width: 137px;
+  height: 36px;
+  font: inherit;
+  color: var(--text-color-white);
+  border: 2px solid var(--text-color-white);
+  border-radius: 2px;
+  outline: none;
+  background-color: transparent;
+}
+
+.button-show:hover {
+  color: var(--text-color-black);
+  background-color: var(--text-color-white);
+}
+/* .SORTING-RESULTS */
+.sorting-results {
+  background-color: var(--text-color-white);
+}
+.sorting-results p {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--text-color-black);
+}
+
+.sorting-results h2 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  color: var(--text-color-black);
+}
+
+.sorting-list a {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color-black);
+  opacity: 0.3;
+  border-bottom: 1px dashed var(--basic-color-blue);
+}
+
+.sorting-list .active-link {
+  color: var(--basic-color-blue);
+  border-bottom: none;
+}
+
+.sorting-list a:hover {
+  color: var(--basic-color-blue);
+}
+
+.sorting-list a:active {
+  color: var(--text-color-black);
+  border-bottom: none;
+}
+
+.arrow a:hover path {
+  fill: var(--text-color-black);
+}
+
+.arrow a:active path {
+  fill: var(--basic-color-blue);
+}
+
+/* LIST-OF-HOTELS */
+.list-of-hotels {
+  background-color: var(--text-color-white);
+}
+.list-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.block-info h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--text-color-black);
+}
+
+.links-row a {
+  font-weight: 700;
+  color: var(--text-color-white);
+}
+
+.more {
+  width: 110px;
+  min-height: 27px;
+  background-color: var(--basic-color-blue);
+}
+
+.to-book {
+  width: 142px;
+  min-height: 27px;
+  background-color: var(--basic-color-brown);
+}
+
+.rating {
+  width: 110px;
+  min-height: 27px;
+  background: var(--basic-page-color);
+  color: var(--basic-color-rating);
+  text-align: center;
 }
 /* FOOTER */
 .wrapper-footer {

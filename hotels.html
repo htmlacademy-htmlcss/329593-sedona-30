@@ -84,29 +84,27 @@
             </fieldset>
           </form>
           <form class="form-cost-filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="cost-filter">
+            <fieldset class="filter-item">
               <legend class="form-legend">Стоимость в сутки (Р):</legend>
-              <div class="cost-control">
-                <label class="cost-from">
-                  от
-                  <input type="number" name="min-price" value="0">
-                </label>
-                <label class="cost-to">
-                  до
-                  <input type="number" name="max-price" value="3000">
-                </label>
-              </div>
-              <div class="cost-range">
+              <div class="range-filter">
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="3000">
+                  </label>
+                </div>
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
                   <div class="toggle toggle-min" tabindex="0"></div>
                   <div class="toggle toggle-max" tabindex="0"></div>
-                <button type="submit" class="button-show" aria-label="Показать подходящие варианты">Показать</button>
                 </div>
               </div>
             </fieldset>
+            <button type="submit" class="button-show" aria-label="Показать подходящие варианты">Показать</button>
           </form>
 
           <section class="sorting-results">
@@ -176,7 +174,7 @@
                     </tr>
                     <tr class="links-row">
                       <td>
-                        <a href="#" aria-label="Узнать больше о мотеле Desert Quail Inn">Подробнее</a>
+                        <a class="more" href="#" aria-label="Узнать больше о мотеле Desert Quail Inn">Подробнее</a>
                       </td>
                       <td>
                         <a class="to-book" href="#" aria-label="Забронировать номер в мотеле Desert Quail Inn">Забронировать</a>
@@ -204,7 +202,7 @@
                     </tr>
                     <tr class="links-row">
                       <td>
-                        <a href="#" aria-label="Узнать больше об апартаментах Villas at Poco Diablo">Подробнее</a>
+                        <a class="more" href="#" aria-label="Узнать больше об апартаментах Villas at Poco Diablo">Подробнее</a>
                       </td>
                       <td>
                         <a class="to-book" href="#" aria-label="Забронировать апартаменты Villas at Poco Diablo">Забронировать</a>
