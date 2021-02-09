@@ -12,7 +12,6 @@
   <body class="page-body">
     <div class="shadow"><!--Тень центровщик-->
       <header class="main-header"><!--Шапка-->
-        <div class="navigation-wrapper"><!--Обертка содержимого-->
           <nav class="main-navigation">
             <a href="index.html" class="main-header-logo">
               <img src="img/icons/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
@@ -21,13 +20,12 @@
               <li class="navigation-item"><a href="#">Информация</a></li>
               <li class="navigation-item"><a href="#">Фото и видео</a></li>
               <li class="navigation-item"><a href="#">Карта штата</a></li>
-              <li class="navigation-item"><a href="#">Гостиницы</a></li>
+              <li class="navigation-item"><a href="#" class="hotels-disabled">Гостиницы</a></li>
             </ul>
           </nav>
-        </div>
       </header>
       <main class="main">
-        <div class="wrapper-main"><!--Обертка содержимого-->
+        <div class="wrapper-main"> <!--Обертка содержимого-->
           <h1 class="visually-hidden">Гостиницы</h1>
           <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="form-fieldset">
@@ -82,8 +80,6 @@
                 </li>
               </ul>
             </fieldset>
-          </form>
-          <form class="form-cost-filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filter-item">
               <legend class="form-legend">Стоимость в сутки (Р):</legend>
               <div class="range-filter">
@@ -223,7 +219,7 @@
         <div class="wrapper-footer">
           <div class="contacts">
             <a class="adress" href="#">#VISITSEDONA</a>
-            Тел: <a class="phone" href="tel:+74956660166">+7(495)666-01-66</a>
+            <span class="text-phone">Тел:</span><a class="phone" href="tel:+74956660166">+7(495)666-01-66</a>
           </div>
           <div class="social-wrapper">
             <ul class="social-list">
