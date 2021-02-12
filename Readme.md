@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Nurlan](https://up.htmlacademy.ru/htmlcss/30/user/329593).
-* Наставник: [Аслан Березгов](https://htmlacademy.ru/profile/id858779).
+* Наставник: [Владислав Данилов](https://htmlacademy.ru/profile/id491605).
 
 ---
 

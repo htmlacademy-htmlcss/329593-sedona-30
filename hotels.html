@@ -17,7 +17,7 @@
               <img src="img/icons/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
             </a>
             <ul class="site-navigation">
-              <li class="navigation-item"><a href="#">Информация</a></li>
+              <li class="navigation-item"><a class="link-information" href="#">Информация</a></li>
               <li class="navigation-item"><a href="#">Фото и видео</a></li>
               <li class="navigation-item"><a href="#">Карта штата</a></li>
               <li class="navigation-item"><a href="#" class="hotels-disabled">Гостиницы</a></li>
@@ -25,62 +25,61 @@
           </nav>
       </header>
       <main class="main">
-        <div class="wrapper-main"> <!--Обертка содержимого-->
+        <div class="wrapper-main page-hotels"> <!--Обертка содержимого-->
           <h1 class="visually-hidden">Гостиницы</h1>
           <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="form-fieldset">
+            <fieldset class="form-fieldset infrastructure">
               <legend class="form-legend">Инфраструктура:</legend>
               <ul class="form-list">
                 <li class="form-item">
                   <label for="filter-pool" class="check option check-on">
                     <input class="input-check" type="checkbox" name="pool" id="filter-pool" checked>
                     <span class="check-box"></span>
-                    Бассейн
+                    <span class="form-item-text">Бассейн</span>
                   </label>
                 </li>
                 <li class="form-item">
                   <label for="filter-parking" class="check option check-off">
                     <input class="input-check" type="checkbox" name="parking" id="filter-parking">
                     <span class="check-box check-box-parking"></span>
-                    Парковка
+                    <span class="form-item-text">Парковка</span>
                   </label>
                 </li>
                 <li class="form-item">
                   <label for="filter-wi-fi" class="check option check-off">
                     <input class="input-check" type="checkbox" name="wi-fi" id="filter-wi-fi" disabled>
                     <span class="check-box check-box-wi-fi"></span>
-                    Wi-fi
+                    <span class="form-item-text">Wi-fi</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form-fieldset">
+            <fieldset class="form-fieldset type-of-housing">
               <legend class="form-legend">Тип жилья:</legend>
               <ul class="form-list">
                 <li class="form-item">
                   <label for="filter-hotel" class="check option check-on">
                     <input class="input-check" type="checkbox" name="hotel" id="filter-hotel" checked>
                     <span class="check-box"></span>
-                    Гостинница
-                  </label>
+                    <span class="form-item-text">Гостинница</span>
                 </li>
                 <li class="form-item">
                   <label for="filter-motel" class="check option check-on">
                     <input class="input-check" type="checkbox" name="motel" id="filter-motel" checked>
                     <span class="check-box"></span>
-                    Мотель
+                    <span class="form-item-text">Мотель</span>
                   </label>
                 </li>
                 <li class="form-item">
                   <label for="filter-apartments" class="check option check-on">
                     <input class="input-check" type="checkbox" name="apartments" id="filter-apartments" checked disabled>
                     <span class="check-box"></span>
-                    Апартаменты
+                    <span class="form-item-text">Апартаменты</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-item">
+            <fieldset class="form-fieldset price"><!--приведу в порядок когда поиму как оформить его как в макете-->
               <legend class="form-legend">Стоимость в сутки (Р):</legend>
               <div class="range-filter">
                 <div class="price-controls">
@@ -99,14 +98,14 @@
                   <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
               </div>
+              <button type="submit" class="button-show" aria-label="Показать подходящие варианты">Показать</button>
             </fieldset>
-            <button type="submit" class="button-show" aria-label="Показать подходящие варианты">Показать</button>
           </form>
 
           <section class="sorting-results">
             <p>Найдено: 3</p>
             <div class="sorting">
-              <h2>Сортировка</h2>
+              <h2>Сортировка:</h2>
               <ul class="sorting-list">
                 <li class="sorting-item">
                   <a class="active-link" href="#">По цене</a>
@@ -130,13 +129,13 @@
               <li class="list-block">
                 <img src="img/amara-resort.jpg" width="135" height="90" alt="Идеальный романтический курорт, Амара Резорт & Спа">
                 <div class="block-info">
-                  <h3>Amara Resort & Spa</h3>
+                  <h3><a class="block-info-title" href="#">Amara Resort & Spa</a></h3>
                   <table class="block-table">
                     <tr class="table-row">
-                      <td>
+                      <td class="text-cell">
                         Гостинница
                       </td>
-                      <td class="price">
+                      <td class="text-cell">
                         От 4000 р.
                       </td>
                     </tr>
@@ -151,20 +150,20 @@
                   </table>
                 </div>
                 <div class="decorative-wrapper">
-                  <div class="stars">Декоративный элемент</div>
+                  <div class="stars">звезды</div>
                   <div class="rating">Рейтинг: 8,5</div>
                 </div>
               </li>
               <li class="list-block">
                 <img src="img/desert-quaill-inn.jpg" width="135" height="90" alt="Высококлассный мотель, Дезерт Квейл Инн">
                 <div class="block-info">
-                  <h3>Desert Quail Inn</h3>
+                  <h3><a class="block-info-title" href="#">Desert Quail Inn</a></h3>
                   <table class="block-table">
                     <tr class="table-row">
-                      <td>
+                      <td class="text-cell">
                         Мотель
                       </td>
-                      <td class="price">
+                      <td class="text-cell">
                         От 3000 р.
                       </td>
                     </tr>
@@ -178,21 +177,21 @@
                     </tr>
                   </table>
                 </div>
-                <div class="decorative-wrapper">
-                  <div class="stars">Декоративный элемент</div>
+                <div class="decorative-wrapper"><!--Приведу в порядок когда пойму как добавить звезды-->
+                  <div class="stars">звезды</div>
                   <div class="rating">Рейтинг: 8,9</div>
                 </div>
               </li>
               <li class="list-block">
                 <img src="img/poco-diablo.jpg" width="135" height="90" alt="Уютное совершенство, Виллы Оф Поко Дайабло">
                 <div class="block-info">
-                  <h3>Villas at Poco Diablo</h3>
+                  <h3><a class="block-info-title" href="#">Villas at Poco Diablo</a></h3>
                   <table class="block-table">
                     <tr class="table-row">
-                      <td>
+                      <td class="text-cell">
                         Апартаменты
                       </td>
-                      <td class="price">
+                      <td class="text-cell">
                         От 2000 р.
                       </td>
                     </tr>
@@ -207,7 +206,7 @@
                   </table>
                 </div>
                 <div class="decorative-wrapper">
-                  <div class="stars">Декоративный элемент</div>
+                  <div class="stars">звезды</div>
                   <div class="rating">Рейтинг: 9,2</div>
                 </div>
               </li>

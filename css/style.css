@@ -144,10 +144,15 @@
   font-weight: 700;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.link-information:hover {
   color: var(--basic-color-blue);
 }
+
+.link-information:active {
+  color: var(--text-color-black);
+  opacity: 0.3;
+}
+
 
 /* MAIN */
 .wrapper-main {
@@ -222,7 +227,7 @@
 
 .reasons-list {
   display: grid;
-  grid-template-rows: 256px 330px 256px 256px;
+  grid-template-rows: 256px 1fr 256px 1fr;
 }
 
 .city-photo {
@@ -496,8 +501,14 @@
 }
 
 /* HOTELS */
+.page-hotels {
+  display: grid;
+  grid-template-rows: 217px 1fr;
+}
+
 .form-filter {
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 300px 600px;
   min-height: 217px;
   background-image: url(../img/filter.jpg);
   background-repeat: no-repeat;
@@ -505,6 +516,11 @@
   background-color: var(--basic-block-color);
 }
 
+.form-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 .form-list,
 .sorting-list {
   list-style: none;
@@ -512,18 +528,37 @@
   padding: 0;
 }
 
+.infrastructure {
+  margin-left: 72px;
+}
+
 .form-legend {
+  padding-top: 25px;
+  padding-bottom: 24px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
   color: var(--text-color-white);
 }
 
+
 .form-filter,
 .form-cost-filter {
   font: inherit;
   color: var(--text-color-white);
   text-transform: uppercase;
+}
+
+.form-item {
+  padding-bottom: 25px
+}
+
+.form-item:nth-child(3) {
+  padding-bottom: 31px;
+}
+
+.form-item-text {
+  margin-left: 7px;
 }
 
 .option {
@@ -579,17 +614,6 @@
   background-repeat: no-repeat;
 }
 /* FORM-COST-FILTER ПОКА НЕ ПОНЯТНО КАК ПРИВЕСТИ ЕГО В ПОРЯДОК КАК В МАКЕТЕ */
-
-.filter-item legend {
-  margin-bottom: 10px;
-}
-
-.filter-item {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
 .range-filter {
   width: 250px;
   margin-top: 10px;
@@ -677,6 +701,11 @@
 /* .SORTING-RESULTS */
 .sorting-results {
   background-color: var(--text-color-white);
+  display: flex;
+  height: 86px;
+  justify-content: space-between;
+  padding: 0 73px;
+  border-bottom: 1px solid var(--state-input-color-focus);
 }
 .sorting-results p {
   font-size: 21px;
@@ -690,6 +719,22 @@
   line-height: 18px;
   font-weight: normal;
   color: var(--text-color-black);
+  padding: 23px 40px 37px 46px;
+  margin: 0;
+}
+
+.sorting {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sorting-list {
+  display: flex;
+  padding-top: 21px;
+}
+
+.sorting-item {
+  padding-right: 32px;
 }
 
 .sorting-list a {
@@ -703,15 +748,27 @@
 .sorting-list .active-link {
   color: var(--basic-color-blue);
   border-bottom: none;
+  opacity: 1;
 }
 
 .sorting-list a:hover {
   color: var(--basic-color-blue);
+  opacity: 1;
 }
 
 .sorting-list a:active {
   color: var(--text-color-black);
   border-bottom: none;
+  opacity: 1;
+}
+
+
+.arrow {
+  padding-top: 21px;
+}
+
+.arrow a:nth-of-type(1) {
+  padding-right: 10px;
 }
 
 .arrow a:hover path {
@@ -730,15 +787,43 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-left: 73px;
+}
+
+.list-block {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--state-input-color-focus);
+}
+
+.list-block  img {
+  width: 135px;
+  height: 90px;
+  margin: 30px 29px 30px 0px;
+}
+
+.block-info {
+  flex-grow: 1;
+}
+
+.decorative-wrapper {
+  margin-right: 73px;
 }
 
 .block-info h3 {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
+  margin: 23px 0 7px 0
+}
+
+.block-info-title {
   color: var(--text-color-black);
 }
 
+.text-cell  {
+  padding-bottom: 15px;
+}
 .links-row a {
   font-weight: 700;
   color: var(--text-color-white);
@@ -747,13 +832,31 @@
 .more {
   width: 110px;
   min-height: 27px;
+  padding: 3px 16px 3px 17px;
   background-color: var(--basic-color-blue);
+}
+
+.more:hover {
+  background-color: var(--state-color-blue-aiming);
+}
+
+.more:active {
+  background-color: var(--state-color-blue-pressing);
 }
 
 .to-book {
   width: 142px;
   min-height: 27px;
+  padding: 3px 17px 3px 16px;
   background-color: var(--basic-color-brown);
+}
+
+.to-book:hover {
+  background-color: var(--state-color-brown-aiming);
+}
+
+.to-book:active {
+  background-color: var(--state-color-brown-pressing);
 }
 
 .rating {
@@ -781,6 +884,7 @@
   font-weight: 700;
   line-height: 26px;
   color: var(--text-color-black);
+  margin-right: 5px;
 }
 
 .contacts {
