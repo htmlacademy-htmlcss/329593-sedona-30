@@ -61,6 +61,7 @@
   color: var(--text-color-dark);
   text-transform: uppercase;
   background-color: var(--basic-page-color);
+  padding: 0 40px 0 40px;
 }
 
 .page-body a {
@@ -151,6 +152,16 @@
   font-weight: 700;
 }
 
+.site-navigation a:not(.link-hotels-disabled):hover,
+.site-navigation a:not(.link-hotels-disabled):focus {
+  color: var(--basic-color-blue);
+}
+
+.site-navigation a:active {
+  color: var(--text-color-black);
+  opacity: 0.3;
+}
+
 .link-information:hover,
 .link-information:focus {
   color: var(--basic-color-blue);
@@ -225,7 +236,7 @@
   line-height: 26px;
   color: var(--text-color-black);
   margin-top: 44px;
-  margin-bottom: 42px;
+  margin-bottom: 44px;
 }
 
 .reasons-list,
@@ -387,7 +398,7 @@
 }
 
 .reasons-continuation h3 {
-  margin-top: 2px;
+  margin-top: 0px;
   margin-bottom: 45px;
   color: var(--text-color-black);
 }
@@ -401,7 +412,7 @@
 }
 
 .reason-fourth {
-  padding: 47px 71px 54px 71px;
+  padding: 47px 69px 54px 69px;
 }
 
 .reason-fourth h3 {
@@ -421,14 +432,14 @@
 }
 
 .reasons-continuation p:first-of-type {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 /* PROMO-FORM FORM */
 .promo-form {
   position: relative;
   width: 1200px;
-  height: 230px;
+  height: 235px;
   background-color: var(--text-color-white);
   text-align: center;
 }
@@ -439,7 +450,8 @@
   line-height: 24px;
   color: var(--text-color-black);
   margin-top: -18px;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
+  margin-right: 9px;
 }
 
 .promo-form p {
@@ -451,13 +463,14 @@
 }
 
 .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 568px;
-  margin-top: 47px;
+  height: 86px;
+  margin-top: 42px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
   background-color: var(--basic-color-brown);
 }
 
@@ -486,11 +499,20 @@
 /* FORM-BOOKING */
 .form-show {
   position: absolute;
-  left: 315px;
+  left: 316px;
   width: 568px;
   height: 395px;
   background-color: var(--text-color-white);
   box-shadow: var(--basic-form-shadow);
+  animation: bounce 0.6s;
+}
+
+.form-show-hidden {
+  display: none;
+}
+
+.form-show-error {
+  animation: shake 0.6s;
 }
 
 .form-booking {
@@ -605,6 +627,7 @@
   outline: none;
   border: none;
   box-sizing: border-box;
+  background-color: var(--basic-page-color);
 }
 
 .less-more input:hover {
@@ -626,8 +649,16 @@
 }
 
 .label-number {
+  margin-top: 5px;
+}
+
+.label-adults {
   margin-left: 5px;
-  margin-top: 4px;
+  margin-right: 14px;
+}
+
+.label-children {
+  margin-left: 27px;
 }
 
 .button-find {
@@ -657,7 +688,7 @@
 }
 
 .wrapper-map iframe {
-  height: 594px;
+  height: 588px;
   width: 100%;
   border: 0;
 }
@@ -750,6 +781,7 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
 .check-box-parking,
 .check-box-wi-fi {
   background-image: url(../img/icons/shape-square.svg);
@@ -1040,7 +1072,7 @@
 }
 
 .text-cell  {
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 }
 .links-row a {
   font-weight: 700;
@@ -1048,10 +1080,12 @@
 }
 
 .more {
+  display: block;
   width: 110px;
-  min-height: 27px;
-  padding: 3px 16px 3px 17px;
+  height: 27px;
+  text-align: center;
   background-color: var(--basic-color-blue);
+  line-height: 27px;
 }
 
 .more:hover,
@@ -1065,10 +1099,12 @@
 }
 
 .to-book {
+  display: block;
   width: 142px;
-  min-height: 27px;
-  padding: 3px 17px 3px 16px;
+  height: 27px;
+  text-align: center;
   background-color: var(--basic-color-brown);
+  line-height: 27px;
 }
 
 .to-book:hover,
@@ -1130,7 +1166,7 @@
 /* FOOTER */
 
 .main-footer {
-  margin-top: -121px;
+  margin-top: -120px;
   z-index: 1;
 }
 
@@ -1213,4 +1249,38 @@
 
 .links-website:active path {
   fill: var(--state-copyright-color-pressing);
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
